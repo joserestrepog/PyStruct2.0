@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>f_GraficaDispersion</class>
+ <widget class="QWidget" name="f_GraficaDispersion">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>782</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>782</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Gráficos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/iconos/Logo.png</normaloff>../assets/iconos/Logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame{
+	border: 2px solid #0099CC;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="fr_GraficaDispersion">
+     <property name="minimumSize">
+      <size>
+       <width>782</width>
+       <height>560</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>782</width>
+       <height>560</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 225, 225);
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <widget class="QLabel" name="l_FigLogo">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QLabel{
+	border: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/iconos/Logo.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_Titulo">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>20</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	font: 75 12pt &quot;MS Shell Dig 2&quot; #0099CC;
+	color: #0099CC;
+	border: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Gráficas de Dispersión</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="fr_TipoGrafica">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>741</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{	
+	background-color: rgb(255, 255, 255);
+	border: 2px solid #a8a8a8;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="L_Fig3D">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>110</y>
+         <width>301</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{	
+	border: 2px solid #0099CC;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../assets/iconos/gDispersion3D.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_Fig2D">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>110</y>
+         <width>301</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	border: 2px solid #0099CC;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../assets/iconos/gDispesion2D.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_TipoGrafica">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>10</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	background-color: rgb(225, 225, 225);
+	font: 75 13pt &quot;MS Shell Dig 2&quot; #0099CC;
+	color: #000000;
+	border: 2px solid #0099CC;
+}</string>
+       </property>
+       <property name="text">
+        <string>Dispersión</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="rb_2D">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>70</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+	background-color: rgb(255, 255, 255);
+	font: 75 12pt &quot;MS Shell Dig 2&quot;;
+	color: #000000;
+	border: 2px solid #0099CC;
+}</string>
+       </property>
+       <property name="text">
+        <string>2D</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="rb_3D">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>70</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+	background-color: rgb(255, 255, 255);
+	font: 75 12pt &quot;MS Shell Dig 2&quot;;
+	color: #000000;
+	border: 2px solid #0099CC;
+}</string>
+       </property>
+       <property name="text">
+        <string>3D</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="b_Aceptar">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>490</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Aceptar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="b_Cancelar">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>490</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Cancelar</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_ColorParticulas">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>510</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Black</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Blue</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Magenta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Orange</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pink</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Red</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yellow</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_TamanoParticulas">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>510</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>24</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="l_color">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>510</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0px;
+font: 75 10pt &quot;MS Shell Dig 2&quot; #0099CC;</string>
+      </property>
+      <property name="text">
+       <string>Color:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_tamParticulas">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>510</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0px;
+font: 75 10pt &quot;MS Shell Dig 2&quot; #0099CC;</string>
+      </property>
+      <property name="text">
+       <string>Tamaño Particula:</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>381</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>470</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0px;
+font: 75 10pt &quot;MS Shell Dig 2&quot; #0099CC;</string>
+      </property>
+      <property name="text">
+       <string>Estilo de gráfica</string>
+      </property>
+     </widget>
+     <zorder>frame</zorder>
+     <zorder>l_FigLogo</zorder>
+     <zorder>l_Titulo</zorder>
+     <zorder>fr_TipoGrafica</zorder>
+     <zorder>b_Aceptar</zorder>
+     <zorder>b_Cancelar</zorder>
+     <zorder>cb_ColorParticulas</zorder>
+     <zorder>cb_TamanoParticulas</zorder>
+     <zorder>l_color</zorder>
+     <zorder>l_tamParticulas</zorder>
+     <zorder>label</zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../assets/iconos/iconos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

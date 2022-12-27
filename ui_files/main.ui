@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>f_PyStruct</class>
+ <widget class="QMainWindow" name="f_PyStruct">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1471</width>
+    <height>909</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1471</width>
+    <height>908</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Ventana Principal -- PyStruct</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/iconos/Logo.png</normaloff>../assets/iconos/Logo.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(213, 213, 213);</string>
+  </property>
+  <widget class="QWidget" name="cw_FondoPyStruct">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gl_ContenedorFunciones">
+      <item row="0" column="1">
+       <widget class="QFrame" name="fr_TablasGraficas">
+        <property name="minimumSize">
+         <size>
+          <width>931</width>
+          <height>831</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::TabFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 250, 250);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QTabWidget" name="tw_Pestanas">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="tabShape">
+            <enum>QTabWidget::Triangular</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="tabsClosable">
+            <bool>true</bool>
+           </property>
+           <property name="movable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="Pestana1">
+            <property name="inputMethodHints">
+             <set>Qt::ImhNoEditMenu</set>
+            </property>
+            <attribute name="title">
+             <string>PyStruct</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="inputMethodHints">
+                <set>Qt::ImhNoEditMenu</set>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../assets/iconos/fondoPresentacion.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QFrame" name="fr_SeccionBotones">
+          <property name="minimumSize">
+           <size>
+            <width>371</width>
+            <height>211</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>371</width>
+            <height>211</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(250, 250, 250);
+</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="b_Importar">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Importar</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Importar.png</normaloff>../assets/iconos/Importar.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Exportar">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Exportar</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Exportar.png</normaloff>../assets/iconos/Exportar.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Predictor">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>10</y>
+             <width>93</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Predictor.png</normaloff>../assets/iconos/Predictor.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>90</width>
+             <height>90</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Pegar">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>120</y>
+             <width>61</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Pegar1.png</normaloff>../assets/iconos/Pegar1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Copiar">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>120</y>
+             <width>93</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Copiar</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Copiar.png</normaloff>../assets/iconos/Copiar.png</iconset>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Cortar">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>160</y>
+             <width>93</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Cortar</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Cortar.png</normaloff>../assets/iconos/Cortar.png</iconset>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_PaletaColores">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>160</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/A.png</normaloff>../assets/iconos/A.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cb_TipoLetra">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>120</y>
+             <width>131</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <item>
+            <property name="text">
+             <string>Arial</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Gill Sans MT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Times New Roman</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Calibri</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Verdana</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Algerian</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Blackadder ITC</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="cb_TamanoLetra">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>120</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <item>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>12</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>14</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>16</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>18</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>24</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>26</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>28</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="b_Negrilla">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>160</y>
+             <width>21</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/N.png</normaloff>../assets/iconos/N.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Cursiva">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>160</y>
+             <width>21</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/K.png</normaloff>../assets/iconos/K.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Subrayado">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>160</y>
+             <width>21</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/S.png</normaloff>../assets/iconos/S.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Izquierda">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>160</y>
+             <width>21</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Izquierda.png</normaloff>../assets/iconos/Izquierda.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Centrado">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>160</y>
+             <width>21</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Centro.png</normaloff>../assets/iconos/Centro.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Derecha">
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>160</y>
+             <width>21</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../assets/iconos/Derecha.png</normaloff>../assets/iconos/Derecha.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QFrame" name="fr_Graficar">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>10</y>
+             <width>111</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame{
+	border: 2px solid #848484;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QPushButton" name="b_graficar">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>91</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../assets/iconos/Graficar.png</normaloff>../assets/iconos/Graficar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>55</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_TipoGrafica">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>91</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 0px;</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Tipo</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lineal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dispersión</string>
+             </property>
+            </item>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="b_Qnegrilla">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>190</y>
+             <width>21</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Qcursiva">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>190</y>
+             <width>21</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_Qsubrayado">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>190</y>
+             <width>21</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QFrame" name="fr_SeccionArchivos">
+          <property name="minimumSize">
+           <size>
+            <width>371</width>
+            <height>301</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>371</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(250, 250, 250);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QTreeView" name="tree">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>351</width>
+             <height>251</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>131</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 9pt;</string>
+           </property>
+           <property name="text">
+            <string>Árbol de directorios</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QFrame" name="fr_EspacioTrabajo">
+          <property name="minimumSize">
+           <size>
+            <width>371</width>
+            <height>301</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>371</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(250, 250, 250);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QTreeView" name="treePred">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>41</y>
+             <width>351</width>
+             <height>251</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>131</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 9pt;</string>
+           </property>
+           <property name="text">
+            <string>Espacio de Trabajo</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	font-size: 10pt;
+	color: rgb(75, 75, 75);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Desarrollado por Ernesto Montes - Oscar Ramírez</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuPyStruct">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1471</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">selection-color: rgb(35, 141, 241);</string>
+    </property>
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="nuevo"/>
+    <addaction name="abrir"/>
+    <addaction name="guardarComo"/>
+    <addaction name="separator"/>
+    <addaction name="cerrarSesion"/>
+    <addaction name="cerrar"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">selection-color: rgb(35, 141, 241);</string>
+    </property>
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="copiar"/>
+    <addaction name="pegar"/>
+    <addaction name="cortar"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::TabFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">selection-color: rgb(35, 141, 241);</string>
+    </property>
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="estadoLicencia"/>
+    <addaction name="documentacion"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <action name="nuevo">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Nuevo.png</normaloff>../assets/iconos/Nuevo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nueva Pestaña</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="abrir">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Insertar.png</normaloff>../assets/iconos/Insertar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="guardar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Guardar.png</normaloff>../assets/iconos/Guardar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="guardarComo">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/GuardarComo.png</normaloff>../assets/iconos/GuardarComo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar como</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="cerrar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Cerrar.png</normaloff>../assets/iconos/Cerrar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="copiar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Copiar.png</normaloff>../assets/iconos/Copiar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="pegar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Pegar.png</normaloff>../assets/iconos/Pegar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pegar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="cortar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Cortar.png</normaloff>../assets/iconos/Cortar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cortar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="insertar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Insertar.png</normaloff>../assets/iconos/Insertar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insertar</string>
+   </property>
+  </action>
+  <action name="actionEliminar">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="eliminar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Eliminar.png</normaloff>../assets/iconos/Eliminar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="estadoLicencia">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Licencia.png</normaloff>../assets/iconos/Licencia.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cuenta</string>
+   </property>
+  </action>
+  <action name="documentacion">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Documentacion.png</normaloff>../assets/iconos/Documentacion.png</iconset>
+   </property>
+   <property name="text">
+    <string>Documentación</string>
+   </property>
+  </action>
+  <action name="actualizaciones">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/Actualizar.png</normaloff>../assets/iconos/Actualizar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Actualizaciones</string>
+   </property>
+  </action>
+  <action name="cerrarSesion">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/iconos/CerrarSesion.png</normaloff>../assets/iconos/CerrarSesion.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cerrar Sesión</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../assets/iconos/iconos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
