@@ -49,7 +49,6 @@ class iniciarSesion(QWidget, f_InicioSesion):
                     self.progreso.setValue(i)                
                 
                 #Minimizar el inicio de sesión e instanciar y mostrar ventana principal PyStruct
-                self.showMinimized() 
                 window = Main(self)
                 window.show()
                 #Vaciar los campos de inicio de sesión
