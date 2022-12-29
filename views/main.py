@@ -408,7 +408,7 @@ class f_PyStruct(object):
     # setupUi
 
     def retranslateUi(self, f_PyStruct):
-        f_PyStruct.setWindowTitle(QCoreApplication.translate("f_PyStruct", u"Ventana Principal -- PyStruct", None))
+        f_PyStruct.setWindowTitle(QCoreApplication.translate("f_PyStruct", u"Ventana Principal -- PyStruct 2.0", None))
         self.nuevo.setText(QCoreApplication.translate("f_PyStruct", u"Nueva Pesta\u00f1a", None))
 #if QT_CONFIG(shortcut)
         self.nuevo.setShortcut(QCoreApplication.translate("f_PyStruct", u"Ctrl+N", None))
@@ -449,7 +449,7 @@ class f_PyStruct(object):
         self.actualizaciones.setText(QCoreApplication.translate("f_PyStruct", u"Actualizaciones", None))
         self.cerrarSesion.setText(QCoreApplication.translate("f_PyStruct", u"Cerrar Sesi\u00f3n", None))
         self.label.setText("")
-        self.tw_Pestanas.setTabText(self.tw_Pestanas.indexOf(self.Pestana1), QCoreApplication.translate("f_PyStruct", u"PyStruct", None))
+        self.tw_Pestanas.setTabText(self.tw_Pestanas.indexOf(self.Pestana1), QCoreApplication.translate("f_PyStruct", u"PyStruct 2.0", None))
         self.b_Importar.setText(QCoreApplication.translate("f_PyStruct", u"Importar", None))
         self.b_Exportar.setText(QCoreApplication.translate("f_PyStruct", u"Exportar", None))
         self.b_Predictor.setText("")

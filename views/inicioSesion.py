@@ -108,7 +108,7 @@ class f_InicioSesion(object):
     # setupUi
 
     def retranslateUi(self, f_InicioSesion):
-        f_InicioSesion.setWindowTitle(QCoreApplication.translate("f_InicioSesion", u"Inicio de Sesi\u00f3n - PyStruct", None))
+        f_InicioSesion.setWindowTitle(QCoreApplication.translate("f_InicioSesion", u"Inicio de Sesi\u00f3n - PyStruct 2.0", None))
         self.l_FigUsuario.setText("")
         self.l_Usuario.setText(QCoreApplication.translate("f_InicioSesion", u"Usuario", None))
         self.l_Contrasena.setText(QCoreApplication.translate("f_InicioSesion", u"Contrase\u00f1a", None))
