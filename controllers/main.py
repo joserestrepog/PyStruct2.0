@@ -204,7 +204,7 @@ class Main(QMainWindow, f_PyStruct):
         if contaPestanas > 0:
 
             #Verificar la pestaña que desean exportar 
-            if nomPestana != 'PyStruct':
+            if nomPestana != 'PyStruct 2.0':
                 
                 #Abrir modulo para exportar archivos, y capturar la ruta y tipo del archivo
                 archivo = QFileDialog.getSaveFileName(self, 'Exportar Archivo','C:/',"Arcivos Excel (*.csv);;Arcivos Excel (*.xlsx);;Arcivos SDMSC (*.dat)")
@@ -274,7 +274,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar de que pestaña desean exportar
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -473,7 +473,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(index)
 
         #Condicional para ver que pestaña desean eliminar (Si es PyStruct o cualquier otra)
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             globals()["tabla_"+str(nomPestana)].clearContents()
             
             #Eliminar pestaña
@@ -558,7 +558,7 @@ class Main(QMainWindow, f_PyStruct):
         filas = dataset.shape[0]
         columnas = dataset.shape[1]
 
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
 
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
@@ -600,7 +600,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar de que pestaña desean exportar
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
             
@@ -678,7 +678,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -717,7 +717,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -756,7 +756,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -795,7 +795,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -836,7 +836,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -877,7 +877,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -914,7 +914,7 @@ class Main(QMainWindow, f_PyStruct):
 
         nomPestana = self.tw_Pestanas.tabText(indice)
 
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -950,7 +950,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -991,7 +991,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -1011,7 +1011,7 @@ class Main(QMainWindow, f_PyStruct):
                 for i in range(minrow,maxrow+1):
                     for j in range(mincol,maxcol+1):
                         font = globals()["tabla_"+str(nomPestana)].item(i, j).font()
-                        font.setItalic(False)        
+                        font.setUnderline(False)        
                         globals()["tabla_"+str(nomPestana)].item(i, j).setFont(font)
             else:
                 #Mensaje de error, en caso de no seleccionar celdas
@@ -1032,7 +1032,7 @@ class Main(QMainWindow, f_PyStruct):
         nomPestana = self.tw_Pestanas.tabText(indice)
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -1078,7 +1078,7 @@ class Main(QMainWindow, f_PyStruct):
         fuente = self.cb_TipoLetra.currentText()
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
@@ -1123,7 +1123,7 @@ class Main(QMainWindow, f_PyStruct):
         tamano = int (self.cb_TamanoLetra.currentText())
 
         #Verificar en que pestaña se encueentra el usuario
-        if nomPestana != 'PyStruct':
+        if nomPestana != 'PyStruct 2.0':
             #Capturar el rango de celdas seleccionadas por el usuario
             rangoSeleccionado = globals()["tabla_"+str(nomPestana)].selectedRanges()
 
