@@ -213,7 +213,7 @@ class Main(QMainWindow, f_PyStruct):
 
                 # Abrir modulo para exportar archivos, y capturar la ruta y tipo del archivo
                 archivo = QFileDialog.getSaveFileName(
-                    self, 'Exportar Archivo', 'C:/', "Arcivos Excel (*.csv);;Arcivos Excel (*.xlsx);;Arcivos SDMSC (*.dat)")
+                    self, 'Exportar Archivo', 'C:/'+nomPestana, "Arcivos Excel (*.csv);;Arcivos Excel (*.xlsx);;Arcivos SDMSC (*.dat)")
 
                 # Validar tipo de archivo que desea guardar el usuario (.dat)
                 if archivo[1] == 'Arcivos SDMSC (*.dat)':
@@ -410,7 +410,6 @@ class Main(QMainWindow, f_PyStruct):
                             # Mensaje de error por si la selección tiene valores nulos o vacíos
                                 mensajes.mensajeError(
                                     'Error de Contenido', 'Los datos seleccionados no cumplen con el formato para ser graficados')
-
                     else:
                         # Mensaje de alerta por si el usuario no selecciona tipo de gráfica
                         mensajes.mensajeAlerta(
