@@ -25,6 +25,7 @@ class Main(QMainWindow, f_PyStruct):
     rangoSeleccionado = None
     contaPestanas = None
     contaNewPestanas = None
+    nombPestImp = None
 
     # Función constructor de la clase
     def __init__(self, parent=None):
@@ -35,10 +36,12 @@ class Main(QMainWindow, f_PyStruct):
         global rangoSeleccionado
         global contaPestanas
         global contaNewPestanas
+        global nombPestImp
 
         contaPestanas = 1
         contaNewPestanas = 1
         rangoSeleccionado = 0
+        nombPestImp = ""
 
         # Conexion entre el menu de la UI y las funciones de la clase Main
         self.abrir.triggered.connect(self.abrirArchivo)
@@ -124,18 +127,29 @@ class Main(QMainWindow, f_PyStruct):
         # Manejo de variables globales
         global contaNewPestanas
         global contaPestanas
+        global nombPestImp
 
         # Validación del total de pestañas en la vista principal
         if contaPestanas < 10:
 
             # Abrir modulo de importar o cargar archivo, con formatos (.csv, .xlsx, .dat)
             archivo = QFileDialog.getOpenFileName(self, 'Importar Archivo', 'C:/',
-                                                  "Arcivos Excel (*.csv);;Arcivos Excel (*.xlsx);;Archivos SDMSC (*.dat)")
+                                                  "Archivos Excel (*.csv);;Archivos Excel (*.xlsx);;Archivos SDMSC (*.dat)")
+
+            rutaArchivo = str(archivo)
+            rutaArchivo = rutaArchivo.replace("Archivos Excel (*.csv)","")
+            rutaArchivo = rutaArchivo.replace(",","")
+            rutaArchivo = rutaArchivo.replace("'","")
+            rutaArchivo = rutaArchivo.replace("(","")
+            rutaArchivo = rutaArchivo.replace(")","")
+            rutaArchivo = rutaArchivo.replace(" ","")
+            head, nombreArchivo = os.path.split(rutaArchivo)
+            nombPestImp = nombreArchivo
 
             # Verificar que tipo de archivo intenta importar el usuario, en caso de ser .csv entra
-            if archivo[1] == "Arcivos Excel (*.csv)":
+            if archivo[1] == "Archivos Excel (*.csv)":
                 # Crear una nueva pestaña
-                self.agregarPestana()
+                self.agregarPestanaImportada()
                 # Leer el archivo importado
                 dataset = pd.read_csv(archivo[0])
 
@@ -152,7 +166,7 @@ class Main(QMainWindow, f_PyStruct):
                                   str(contaNewPestanas)].setItem(i, j, dato2)
 
             # Verificar tipo de archivo, en caso de no ser .csv pero si .xlsx
-            elif archivo[1] == 'Arcivos Excel (*.xlsx)':
+            elif archivo[1] == 'Archivos Excel (*.xlsx)':
                 # Crear una nueva pestaña
                 self.agregarPestana()
                 # Leer el archivo importado
@@ -213,10 +227,10 @@ class Main(QMainWindow, f_PyStruct):
 
                 # Abrir modulo para exportar archivos, y capturar la ruta y tipo del archivo
                 archivo = QFileDialog.getSaveFileName(
-                    self, 'Exportar Archivo', 'C:/'+nomPestana, "Arcivos Excel (*.csv);;Arcivos Excel (*.xlsx);;Arcivos SDMSC (*.dat)")
+                    self, 'Exportar Archivo', 'C:/'+nomPestana, "Archivos Excel (*.csv);;Archivos Excel (*.xlsx);;Archivos SDMSC (*.dat)")
 
                 # Validar tipo de archivo que desea guardar el usuario (.dat)
-                if archivo[1] == 'Arcivos SDMSC (*.dat)':
+                if archivo[1] == 'Archivos SDMSC (*.dat)':
                     # Crear un archivo y abrirlo
                     dat = open(archivo[0], "w")
                     # Ciclo for para sobre escribir el archivo y almacenar cada uno de los datos de la matriz
@@ -261,7 +275,7 @@ class Main(QMainWindow, f_PyStruct):
                     dataset = pd.DataFrame(lista2)
 
                     # Exportar arhivo sea .csv o .xlsx
-                    if archivo[1] == 'Arcivos Excel (*.csv)':
+                    if archivo[1] == 'Archivos Excel (*.csv)':
                         dataset.to_csv(archivo[0], index=False)
                     else:
                         dataset.to_excel(archivo[0], index=False)
@@ -497,6 +511,43 @@ class Main(QMainWindow, f_PyStruct):
             layout.addWidget(globals()["tabla_New_Tab_"+str(contaNewPestanas)])
             globals()["tab_"+str(contaNewPestanas)].setLayout(layout)
             nombrePes = "New_Tab_"+str(contaNewPestanas)
+            # Adicionar pestañas a la vista del usuario
+            self.tw_Pestanas.addTab(
+                globals()["tab_"+str(contaNewPestanas)], nombrePes)
+            # HACER FOCUS EN LA NUEVA PESTAÑA
+            self.tw_Pestanas.setCurrentIndex(contaPestanas - 1)
+        else:
+            # Mensaje de alerta, cuando no se permiten crear mas pestañas
+            mensajes.mensajeAlerta('Alerta', 'Solo se permiten 10 pestañas')
+
+    # Funcion para agregar una nueva pestaña importada
+    def agregarPestanaImportada(self):
+        # Manejo de variables globales
+        global contaPestanas
+        global contaNewPestanas
+        global nombPestImp
+
+        # Validar si hay disponibilidad de agregar una nueva pestaña
+        if contaPestanas < 10:
+
+            # Contadores de cantidad de pestañas y nombre de pestaña
+            contaPestanas = contaPestanas + 1
+            contaNewPestanas = contaNewPestanas + 1
+
+            # Crear la pestaña a traves del llamado de la función en contexto
+            globals()["tabla_New_Tab_"+str(contaNewPestanas)
+                      ] = funcionTablaMain.funcionTabla(self)
+
+            # Crear un widget de contenido
+            globals()["tab_"+str(contaNewPestanas)] = QWidget()
+
+            # Crear un espacio de trabajo
+            layout = QFormLayout()
+
+            # Concatenar estructura
+            layout.addWidget(globals()["tabla_New_Tab_"+str(contaNewPestanas)])
+            globals()["tab_"+str(contaNewPestanas)].setLayout(layout)
+            nombrePes = nombPestImp
             # Adicionar pestañas a la vista del usuario
             self.tw_Pestanas.addTab(
                 globals()["tab_"+str(contaNewPestanas)], nombrePes)
